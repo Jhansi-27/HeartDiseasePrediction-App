@@ -68,9 +68,9 @@ def my_form_post():
         target = get_predictions(age, sex, chest_pain_type, resting_bp, cholesterol,fasting_bloodSugar,resting_ecg,max_heartrate,exercise_induced_angina,oldpeak, slope,num_vessels,thalassemia,req_model)
         print("prediction is : ",target)
         if target == 1:
-            disease_chance = 'Customer is likely to get heart disease'
+            disease_chance = 'Person likely to get a heart disease'
         else:
-            disease_chance = 'Customer is unlikely to get heart disease'
+            disease_chance = 'Person is unlikely to get a heart disease'
 
         return render_template('home.html', target = target, disease_chance = disease_chance)
     else:
